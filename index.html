@@ -1,0 +1,55 @@
+<html>
+<head>
+<link rel="stylesheet" href="style.css">    
+</head>    
+<body>
+<h1>Family Book</h1>
+<hr>
+<img id="FamilyBook" src="depositphotos_44735787-stock-illustration-happy-family-cartoon.jpg">
+<h3 id="Theone">Our family Book</h3>
+<button type="button" onclick="update()">Start</button>  
+
+<br>
+<hr>
+
+<img id="family_member_img" src="">
+<br>
+<h4 id="family_member_names"></h4>
+
+<script>    
+var names {
+"1.Me (B. Samarth)",
+"1.Mom (B. Pravallika)",
+"1.Dad (B. Sai Sanjeev)",
+"1.Sister (B. Samriddhi)",
+"1.GrandMother (B. Rashmi Patnaik)",
+"1.GrandFather (B.G.S. Durga Prasad)",
+};
+
+var img {
+"sam.jpg",
+"mom.jpg",
+"dad.jpg",
+"sammy.HEIC",
+"nani.jpg",
+"thatha.jpg",
+};
+
+var i = 0;
+function update()
+{
+ i++;
+ var number_of_fam_in_array = 6
+ if(i>number_of_fam_in_array)
+ {
+     i = 0;
+ }
+ var updateImage = img[i];
+ var updateName = names[i];
+ document.getElementById("family_member_img").src = updateImage;
+ document.getElementById("family_member_names").innerHTML = updateName;
+}
+</script>
+
+</body>
+</html>
